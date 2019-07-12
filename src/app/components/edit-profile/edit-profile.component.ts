@@ -11,10 +11,10 @@ import { Company } from 'src/app/models/company';
 })
 export class EditProfileComponent implements OnInit {
 
-  public company: Company = new Company();
-  public customer: Customer = new Customer();
-  public companyLoggedIn = false;
-  public customerLoggedIn = false;
+  private company: Company = new Company();
+  private customer: Customer = new Customer();
+  private companyLoggedIn = false;
+  private customerLoggedIn = false;
 
   constructor(private editService: EditService) { }
 
