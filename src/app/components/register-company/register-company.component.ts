@@ -10,7 +10,7 @@ import { Company } from 'src/app/models/company';
 })
 export class RegisterCompanyComponent implements OnInit {
   
-  public company: Company = new Company();
+  private company: Company = new Company();
 
   constructor(private companyRegisterService: CompanyRegisterService, private router: Router) { }
 
