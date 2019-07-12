@@ -10,7 +10,7 @@ import { Customer } from 'src/app/models/customer';
 })
 export class RegisterCustomerComponent implements OnInit {
 
-  public customer: Customer = new Customer();
+  private customer: Customer = new Customer();
   
 
 
