@@ -11,7 +11,7 @@ import { Company } from 'src/app/models/company';
 })
 export class SignInComponent implements OnInit {
 
-  public userDetails: UserDetails = new UserDetails();
+  private userDetails: UserDetails = new UserDetails();
 
   private company: Company = new Company();
   
