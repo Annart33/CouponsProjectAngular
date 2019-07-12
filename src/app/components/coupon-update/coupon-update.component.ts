@@ -9,8 +9,7 @@ import { Coupon } from 'src/app/models/coupons';
 })
 export class CouponUpdateComponent implements OnInit {
 
-  public coupon: Coupon = new Coupon();
-  // private editedCoupon: Coupon = new Coupon();
+  private coupon: Coupon = new Coupon();
 
   constructor(private couponsService: CouponsService) { }
 
