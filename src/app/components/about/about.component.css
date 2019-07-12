@@ -1,0 +1,39 @@
+body {
+ text-align: center;
+ padding-inline-end: 20%;
+ position: relative;
+
+}
+
+
+p {
+    font-family: monospace;
+    text-align: left;
+}
+
+h1{
+    font-family: monospace; 
+    font-size: 170%;
+}
+
+h2{
+    font-size: 110%;
+    color: rgb(59, 179, 59) ;
+    text-align: left;
+}
+
+h3{
+    text-align: left;
+}
+
+
+header{
+    font-family: monospace;
+    text-align: center;
+    padding-top: 50px;
+    padding-right: 300px;
+    font-weight: bold;
+    font-size: 40px;
+    position: relative;
+
+}

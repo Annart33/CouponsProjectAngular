@@ -1,0 +1,65 @@
+<div>
+<form #myForm="ngForm" (ngSubmit)="Add()">
+
+  <input #couponTitle = "ngModel" required type="text" name="couponTitle" [(ngModel)]="coupon.couponTitle" placeholder="Enter Coupon Title">
+  <span *ngIf= "couponTitle.invalid && couponTitle.dirty">Please Enter Name</span>
+  <br>
+  
+
+  <form action="/action_page.php">
+    Start Date:
+    <br>
+  <input type="date" [(ngModel)]="coupon.couponStartDate" name="couponStartDate"> 
+  </form>
+
+  <form action="/action_page.php">
+    End Date:
+    <br>
+  <input type="date" [(ngModel)]="coupon.couponEndDate" name="couponEndtDate"> 
+  </form>
+  
+  
+  <!-- <input #couponEndDate = "ngModel" required type="text" name="couponEndDate" [(ngModel)]="coupon.couponEndDate" placeholder="Choose End Date">
+  <span *ngIf= "couponEndDate.invalid && couponEndDate.dirty">Missing Date</span>
+  <br> -->
+
+
+  <!-- <input #couponType = "ngModel" required type="text" name="couponType" [(ngModel)]="coupon.couponType" placeholder="Enter Coupon Type">
+  <span *ngIf= "couponType.invalid && couponType.dirty">Missing Coupon Type</span>
+  <br> -->
+
+  <select [(ngModel)]="coupon.couponType" name="couponType">
+      <option disabled selected hidden>Select Coupon Type</option>
+      <option value="FOOD">FOOD</option>
+      <option value="VACATION">VACATION</option>
+      <option value="ELECTRICITY">ELECTRICITY</option>
+</select>
+<br>
+    
+
+    <input #couponAmount = "ngModel" required type="number" name="couponAmount" [(ngModel)]="coupon.couponAmount" placeholder="Enter Amount Of Coupons">
+  <span *ngIf= "couponAmount.invalid && couponAmount.dirty">Missing Coupon Amount</span>
+  <br>
+
+    <input #couponPrice = "ngModel" required type="number" name="couponPrice" [(ngModel)]="coupon.couponPrice" placeholder="Enter Price">
+    <span *ngIf= "couponPrice.invalid && couponPrice.dirty">Enter Price</span>
+    <br>
+
+    <textarea #message = "ngModel" required minlength="5" type = "text" name = "couponMessage"
+    [(ngModel)]='coupon.couponMessage' placeholder="Description"></textarea>
+  <!-- <span *ngIf= "couponMessage.invalid && couponMessage.dirty">Missing Description</span> -->
+  <br>
+
+
+
+  <input type="file" name="couponImage" accept="/assets/images/{{coupon.couponType}}/*">
+  <br>
+  <!-- coupon image -->
+  <!-- company id (appears automatically) -->
+
+
+  
+  <button [disabled] ="myForm.form.invalid">Add Coupon</button>
+  
+  </form>
+</div>

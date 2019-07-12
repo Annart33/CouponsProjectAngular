@@ -1,0 +1,42 @@
+<div>
+        <h2>Registration Page</h2>
+        
+        <form #myForm ="ngForm" (ngSubmit)= 'register()'> 
+
+                <a class="tab">
+                        <button class="tablinks" routerLink="/registerCustomer">Customer</button>
+                        <button class="tablinks" routerLink="/registerCompany">Company</button>
+                </a>
+                
+        
+        
+        <input #name ="ngModel" required type = "text" name = "customerName"
+            [(ngModel)]='customer.customerName' placeholder="Full Name">
+            <!-- <span *ngIf="customerName.invalid && customerName.dirty">First Name is missing</span> -->
+        <br><br>
+        
+        <!-- <input #lastName = "ngModel" required type = "text" name = "lastName"
+            [(ngModel)]='Customer.lastName' placeholder="Last Name">
+            <span *ngIf="lastName.invalid && firstName.dirty">Last Name is missing</span>
+        <br><br>  -->
+        
+        <input #email = "ngModel" email type = "email" name = "customerEmail"
+            [(ngModel)]='customer.customerEmail' placeholder="Email">
+            <!-- <span *ngIf="customerEmail.invalid && customerEmail.dirty">Email Is Invalid</span> -->
+        <br><br> 
+        
+        <input #password = "ngModel" required type = "password" name = "customerPassword"
+            [(ngModel)]='customer.customerPassword' placeholder="Password">
+            <!-- <span *ngIf="customerPassword.invalid && customerPassword.dirty">Password Is Invalid</span> -->
+        <br><br> 
+        
+        <!-- <input #secondPassword = "ngModel" required type = "password" name = "secondPassword"
+            [(ngModel)]='Customer.password' placeholder="Retype Password">
+            <span *ngIf="paaword.invalid && passwrod.dirty">Password Is Invalid</span>
+        <br><br> -->
+        
+        <button [disabled]="myForm.form.invalid">Register</button>
+        
+        </form>
+        </div>
+        <!-- {{customer | json}}  -->

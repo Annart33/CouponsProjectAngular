@@ -1,0 +1,17 @@
+<div>
+    <form #myForm="ngForm" (ngSubmit)="send()">
+
+<input required type="text" name="name" placeholder="Enter your name">
+<br>
+
+  <input required type="text" name="phoneNumber" placeholder="Enter your phone number">
+  <br>
+
+  <textarea required minlength="5" type = "text" name = "message" placeholder="Please Enter Your Message"></textarea>
+<br>
+
+
+<button [disabled] ="myForm.form.invalid">Send</button>
+  
+</form>
+</div>

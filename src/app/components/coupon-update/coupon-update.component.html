@@ -1,0 +1,45 @@
+<div>
+  <form #myForm="ngForm" (ngSubmit)="update()">
+  
+    <input #couponTitle="ngModel" required type="text" name="couponTitle" [(ngModel)]="coupon.couponTitle"
+    placeholder="Enter Coupon Name">
+    <span *ngIf= "couponTitle.invalid && couponTitle.dirty" >Please Enter Name</span>
+    <br>
+    
+    <input #couponStartDate = "ngModel" required type="text" name="couponStartDate" [(ngModel)]="coupon.couponStartDate" placeholder="Choose Start Date">
+    <span *ngIf= "couponStartDate.invalid && couponStartDate.dirty">Missing Date</span>
+    <br>
+    
+    
+    <input #couponEndDate = "ngModel" required type="text" name="couponEndDate" [(ngModel)]="coupon.couponEndDate" placeholder="Choose End Date">
+    <span *ngIf= "couponEndDate.invalid && couponEndDate.dirty">Missing Date</span>
+    <br>
+    
+  
+    <input #couponAmount = "ngModel" required type="number" name="couponAmount" [(ngModel)]="coupon.couponAmount" placeholder="Enter Amount Of Coupons">
+    <span *ngIf= "couponAmount.invalid && couponAmount.dirty">Missing Coupon Amount</span>
+    <br>
+  
+    <input #couponType = "ngModel" required type="text" name="couponType" [(ngModel)]="coupon.couponType" placeholder="Enter Coupon Type">
+    <span *ngIf= "couponType.invalid && couponType.dirty">Missing Coupon Type</span>
+    <br>
+  
+    <input #couponMessage = "ngModel" required type="text" name="couponMessage" [(ngModel)]="coupon.couponMessage" placeholder="Enter Description">
+    <span *ngIf= "couponMessage.invalid && couponMessage.dirty">Missing Description</span>
+    <br>
+  
+    <input #couponPrice = "ngModel" required type="number" name="couponPrice" [(ngModel)]="coupon.couponPrice" placeholder="Enter Price">
+    <span *ngIf= "couponPrice.invalid && couponPrice.dirty">Enter Price</span>
+    <br>
+  
+    <!-- <input type="file" (change)="onFileSelected($event)" name="couponImage" accept="/assets/images/{{coupon.couponType}}/*">
+    <br> -->
+    <!-- coupon image -->
+    <!-- company id (appears automatically) -->
+  
+  
+    
+    <button [disabled] ="myForm.form.invalid">Update</button>
+    
+    </form>
+  </div>

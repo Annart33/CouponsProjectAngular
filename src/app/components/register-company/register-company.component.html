@@ -1,0 +1,42 @@
+<div>
+    <h2>Registration Page</h2>
+
+    <form #myForm="ngForm" (ngSubmit)='register()'>
+
+        <a class="tab">
+            <button class="tablinks" routerLink="/registerCustomer">Customer</button>
+            <button class="tablinks" routerLink="/registerCompany">Company</button>
+        </a>  
+          
+
+
+        <input #name="ngModel" required type="text" name="companyName" [(ngModel)]='company.companyName' placeholder="Name Of The Comapny">
+        <!-- <span *ngIf="companyName.invalid && companyName.dirty">Name is missing</span> -->
+        <br><br>
+
+        <input #email="ngModel" required type="email" name="companyEmail" [(ngModel)]='company.companyEmail' placeholder="Email">
+        <!-- <span *ngIf="companyEmail.invalid && companyEmail.dirty">Email Is Invalid</span> -->
+        <br><br>
+
+        <!-- <input #adress="ngModel" email type="text" name="adress" [(ngModel)]='company.adress' placeholder="Adress">
+        <span *ngIf="adress.invalid && adress.dirty">Adress Is Invalid</span>
+        <br><br> -->
+
+        <!-- <input #phoneNumber="ngModel" email type="text" name="phoneNumber" [(ngModel)]='company.phoneNumber'
+            placeholder="Phone Number">
+        <span *ngIf="phoneNumber.invalid && phoneNumber.dirty">Phone Number Is Invalid</span>
+        <br><br> -->
+
+        <input #password="ngModel" required type="password" name="companyPassword" [(ngModel)]='company.companyPassword' placeholder="Password">
+        <!-- <span *ngIf="companyPassword.invalid && companyPassword.dirty">Password Is Invalid</span> -->
+        <br><br>
+
+        <!-- <input #secondPassword="ngModel" required type="password" name="secondPassword" [(ngModel)]='company.password'
+            placeholder="Retype Password">
+        <span *ngIf="password.invalid && password.dirty">Password Is Invalid</span>
+        <br><br> -->
+
+        <button [disabled]="myForm.form.invalid">Register</button>
+
+    </form>
+</div>

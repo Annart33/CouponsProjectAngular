@@ -1,0 +1,25 @@
+<div>
+<h2>Sign In</h2>
+
+<a>
+    <button class="btn" (click)='setCustomer()'>Customer</button>
+    <button class="btn" (click)='setCompany()'>Company</button>
+</a>
+
+<form #myForm ="ngForm" (ngSubmit)= 'login()'>     
+  
+    <input #name= "ngModel" required type = "email" name = "email"
+      [(ngModel)]='userDetails.email' placeholder="Email">
+      <!-- <span *ngIf="email.invalid && email.dirty">Email Is Invalid</span> -->
+  <br> 
+  
+  <input #name = "ngModel" required type = "password" name = "password"
+      [(ngModel)]='userDetails.password' placeholder="Password">
+      <!-- <span *ngIf="password.invalid && passwrod.dirty">Password Is Invalid</span> -->
+  <br>
+  
+  <button [disabled]="myForm.form.invalid">Sign In</button>
+  
+  </form>
+</div>
+{{userDetails | json}} 

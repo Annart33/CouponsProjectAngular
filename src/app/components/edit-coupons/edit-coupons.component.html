@@ -1,0 +1,38 @@
+<div *ngIf="companyLoggedIn || notLoggedIn">
+  <div *ngIf="allCoupons">
+
+    <div class="column" *ngFor="let c of allCoupons">
+
+      <div class="row">
+        <div class="card">
+          <div>{{c.couponImage}}</div>
+          <div class="title">{{c.couponTitle}}</div>
+          <div class="myRow">DESCRIPTION:</div>{{c.couponMessage}}
+          <div class="myRow">EXPIRATION DATE:</div>{{c.couponEndDate| date: 'dd/MM/yyyy'}}
+          <div class="myRow">PRICE:</div>{{c.couponPrice}}$
+
+          <!-- <td><img src="/assets/images/{{c.couponType}}/{{c.couponId}}.jpg"></td>  -->
+
+          <!-- {{allCoupons | json}}  -->
+
+          <div *ngIf="companyLoggedIn">
+            <form #myForm="ngForm" (ngSubmit)='update(c.couponId)'>
+              <br>
+
+              <button [disabled]="myForm.form.invalid">Update</button>
+
+            </form>
+            <br>
+
+            <form #myForm="ngForm" (ngSubmit)='delete(c.couponId)'>
+
+              <button [disabled]="myForm.form.invalid">Delete</button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

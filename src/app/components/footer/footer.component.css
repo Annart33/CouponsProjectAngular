@@ -1,0 +1,17 @@
+
+    div {
+        height: 0%;
+        
+        
+    }
+    
+    P{
+        margin-top: 200px;
+        margin-bottom: 10px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        right: 45%;
+        transform: translateY(-50%);
+    }

@@ -1,0 +1,31 @@
+div{
+    position: absolute; 
+    top: 250px;
+    right: 40%;
+}
+
+h2{
+    color:  rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+input, textarea{
+width: 300px;
+font-size: large;
+margin: 10px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    position: absolute;
+    top: 60px;
+    right: 100px;
+}
+
+.tablinks:focus{
+    color: green;
+
+}
+
+
+

@@ -1,0 +1,57 @@
+html {
+    font-family: Arial;
+  font-size: 16px;
+  background: #ffffff;
+}
+
+.sidebar {
+  position: absolute;
+  width: 15%;
+  height: 100vh;
+  background: #f7f7f7;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.nav {
+  position: relative;
+  margin: 0 15%;
+  text-align: left;
+  top: 20%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+
+.nav ul {
+    list-style: none;
+}
+  
+li{
+    position: relative;
+    margin: 3.2em 0;
+  }
+    
+a {
+      line-height: 2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.2em;
+      color: rgba(rgb(88, 16, 85), 0.35);
+      display: inline;
+      transition: all ease-out 300ms;
+      
+    }
+    
+     a:focus, a:hover{
+     color: rgb(20, 167, 20)
+ }
+
+ 
+  p {
+    
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    color: #FFF;
+    margin-top: 20px;
+  }

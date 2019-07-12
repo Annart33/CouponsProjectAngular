@@ -1,0 +1,81 @@
+<section>
+    <div *ngIf="companyLoggedIn">
+
+        <h2>Edit Profile</h2>
+
+        <form #myForm="ngForm" (ngSubmit)="editCompany()">
+
+
+            <input #name="ngModel" required type="text" name="companyName" [(ngModel)]='company.companyName'
+                placeholder="Name Of The Company">
+            <!-- <span *ngIf="companyName.invalid && companyName.dirty">Name is missing</span> -->
+            <br><br>
+
+            <input #email="ngModel" required type="email" name="companyEmail" [(ngModel)]='company.companyEmail'
+                placeholder="Email">
+            <!-- <span *ngIf="companyEmail.invalid && companyEmail.dirty">Email Is Invalid</span> -->
+            <br><br>
+
+            <!-- <input #adress="ngModel" email type="text" name="adress" [(ngModel)]='company.adress' placeholder="Adress">
+              <span *ngIf="adress.invalid && adress.dirty">Adress Is Invalid</span>
+              <br><br> -->
+
+            <!-- <input #phoneNumber="ngModel" email type="text" name="phoneNumber" [(ngModel)]='company.phoneNumber'
+                  placeholder="Phone Number">
+              <span *ngIf="phoneNumber.invalid && phoneNumber.dirty">Phone Number Is Invalid</span>
+              <br><br> -->
+
+            <input #password="ngModel" required type="password" name="companyPassword"
+                [(ngModel)]='company.companyPassword' placeholder="Password">
+            <!-- <span *ngIf="companyPassword.invalid && companyPassword.dirty">Password Is Invalid</span> -->
+            <br><br>
+
+            <!-- <input #secondPassword="ngModel" required type="password" name="secondPassword" [(ngModel)]='company.password'
+                  placeholder="Retype Password">
+              <span *ngIf="password.invalid && password.dirty">Password Is Invalid</span>
+              <br><br> -->
+
+            <button [disabled]="myForm.form.invalid">Update</button>
+
+        </form>
+      
+
+    </div>
+
+
+        <div *ngIf="customerLoggedIn">
+            <h2>Edit Profile</h2>
+
+            <form #myForm="ngForm" (ngSubmit)='editCustomer()'>
+
+                <input #name="ngModel" required type="text" name="customerName" [(ngModel)]='customer.customerName'
+                    placeholder="First Name">
+                <!-- <span *ngIf="customerName.invalid && customerName.dirty">First Name is missing</span> -->
+                <br><br>
+
+                <!-- <input #lastName = "ngModel" required type = "text" name = "lastName"
+            [(ngModel)]='Customer.lastName' placeholder="Last Name">
+            <span *ngIf="lastName.invalid && firstName.dirty">Last Name is missing</span>
+        <br><br>  -->
+
+                <input #email="ngModel" required type="email" name="customerEmail" [(ngModel)]='customer.customerEmail'
+                    placeholder="Email">
+                <!-- <span *ngIf="customerEmail.invalid && customerEmail.dirty">Email Is Invalid</span> -->
+                <br><br>
+
+                <input #password="ngModel" required type="password" name="customerPassword"
+                    [(ngModel)]='customer.customerPassword' placeholder="Password">
+                <!-- <span *ngIf="customerPassword.invalid && customerPassword.dirty">Password Is Invalid</span> -->
+                <br><br>
+
+                <!-- <input #secondPassword = "ngModel" required type = "password" name = "secondPassword"
+            [(ngModel)]='Customer.password' placeholder="Retype Password">
+            <span *ngIf="paaword.invalid && passwrod.dirty">Password Is Invalid</span>
+        <br><br> -->
+
+        <button [disabled] ="myForm.form.invalid">Update</button>
+
+            </form>
+
+        </div>
+</section>

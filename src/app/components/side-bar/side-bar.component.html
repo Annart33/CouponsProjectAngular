@@ -1,0 +1,16 @@
+<section>
+
+                <div *ngIf="companyLoggedIn || customerLoggedIn; else notLoggedIn">
+                        <a routerLink="/edit">Edit Profile</a>
+                        |
+                        <a routerLink="/logOut">Log Out</a>
+                </div>
+                
+                <ng-template #notLoggedIn>
+                <div>
+                        <a routerLink="signIn">Sign In</a>
+                        |
+                        <a routerLink="register">Register</a>
+                </div>
+                </ng-template>
+        </section>
