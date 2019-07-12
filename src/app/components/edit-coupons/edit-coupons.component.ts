@@ -10,9 +10,9 @@ import { CouponsService } from 'src/app/services/coupons.service';
 })
 export class EditCouponsComponent implements OnInit {
 
-  public coupon: Coupon;
+  private coupon: Coupon;
 
-  public allCoupons = new Array<Coupon>();
+  private allCoupons = new Array<Coupon>();
 
 
   customerLoggedIn = false;
